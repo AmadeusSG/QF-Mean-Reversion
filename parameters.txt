@@ -1,0 +1,22 @@
+FOR result_new_ideal_market
+# Backtesting Parameters
+self.investment = 10000000       # Initial investment
+self.portfolio_size = 50         # Maximum number of stocks in the portfolio
+self.fee_value = 0               # Transaction fee based on value sold
+self.fee_quantity = 0             # Transaction fee based on quantity sold
+self.fee_min = 0                  # Minimum transaction fee per transaction (applied on selling only)
+self.spread = 0                  # Spread expressed as absolute value
+self.allow_short = True          # Shortselling stocks is allowed
+self.divisible_stocks = True     # Allow shares to be infinitely divisible
+
+
+FOR result_new_with_spread_and_fee
+# Backtesting Parameters
+self.investment = 10000000       # Initial investment
+self.portfolio_size = 50         # Maximum number of stocks in the portfolio
+self.fee_value = 0.0000218       # Transaction fee based on value sold
+self.fee_quantity = 0.000119     # Transaction fee based on quantity sold
+self.fee_min = 1                 # Minimum transaction fee per transaction (applied on selling only)
+self.spread = 0.01                # Spread expressed as absolute value
+self.allow_short = True          # Shortselling stocks is allowed
+self.divisible_stocks = False     # Allow shares to be infinitely divisible
