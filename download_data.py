@@ -3,7 +3,7 @@ import urllib.request
 import os
 
 CompanyListDir = "CompanyList3" # Company List Directory
-QuoteDir = "Quotes3" # Quotes Directory
+QuoteDir = "quotes" # Quotes Directory
 
 # current working directory
 sys_cwd = os.path.dirname(os.path.realpath(__file__))
@@ -11,8 +11,8 @@ sys_cwd = os.path.dirname(os.path.realpath(__file__))
 # url for company list csv file (from nasdaq.com)
 src_url = {
     # "AMEX": "http://www.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=amex&render=download",
-    "NASDAQ": "http://www.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=nasdaq&render=download",
-    # "NYSE": "http://www.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=nyse&render=download",
+    # "NASDAQ": "http://www.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=nasdaq&render=download",
+    "NYSE": "http://www.nasdaq.com/screening/companies-by-name.aspx?letter=0&exchange=nyse&render=download",
 }
 
 # update company list using the urls in src_url dictionary, saving csv files into companylist folder
@@ -64,6 +64,6 @@ def get_all_quotes(exchange):
 
 if __name__ == "__main__":
     get_company_list()
-    get_all_quotes("NASDAQ")
+    # get_all_quotes("NASDAQ")
     # get_all_quotes("AMEX")
-    # get_all_quotes("NYSE")
+    get_all_quotes("NYSE")
